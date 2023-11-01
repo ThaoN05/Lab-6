@@ -25,8 +25,11 @@ def main():
                 print("Your password has been encoded and stored!")
             except ValueError as e:
                 print(e)
+
         elif choice == '2':
-            #add decode function
+            # add decode function and remove "pass"
+            pass
+
         elif choice == '3':
             # Quit program
             print("Exiting program.")
