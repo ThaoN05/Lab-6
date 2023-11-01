@@ -12,6 +12,7 @@ def decode(encoded_password):
 
 
 def main():
+    encoded_password = ''
     while True:
         # Display menu
         print("Menu")
@@ -34,8 +35,11 @@ def main():
 
         elif choice == '2':
             # add decode function and remove "pass"
-            decode(encoded_password)
-            print(f"The encoded password is {encoded_password}, and the original password is {password}.")
+            if encoded_password:
+                decoded_password = decode(encoded_password)
+                print(f"The encoded password is {encoded_password}, and the original password is {password}.")
+            else:
+                print("Please encode a password first.")
 
         elif choice == '3':
             # Quit program
